@@ -1,14 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GameSilkies is an independent experimental Gamefowl × Silkie crossbreeding project documenting breeding, natural development, behaviour and individual birds.">
-  <meta name="author" content="José Flor (OzFlor)">
+
+  <title>GameSilkies — Independent Poultry Project</title>
+
+  <meta name="description" content="GameSilkies is an independent experimental Gamefowl × Silkie crossbreeding and documentation project founded by José Flor (OzFlor) in March 2024.">
+
+  <meta name="author" content="José António Flor de Sousa — José Flor (OzFlor)">
   <meta name="rights" content="1992–2026 — Nature shares freely, so do I. Use this kindly, credit OzFlor, and keep it out of business hands.">
   <meta name="theme-color" content="#34483b">
-  <link rel="canonical" href="https://gamesilkies.com">
-  <title>GameSilkies — Documenting the Experiment</title>
+
+  <link rel="canonical" href="https://gamesilkies.com/">
+
   <style>
     :root {
       color-scheme: light;
@@ -20,17 +26,43 @@
       --line: #dce2d9;
       --soft: #eaf0e9;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font: 16px/1.65 system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    a { color: var(--green); text-underline-offset: 3px; }
-    a:hover { text-decoration-thickness: 2px; }
-    .wrap { width: min(960px, calc(100% - 40px)); margin: 0 auto; }
-    header { padding: 64px 0 52px; background: #e9eee7; border-bottom: 1px solid var(--line); }
+
+    a {
+      color: var(--green);
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    .wrap {
+      width: min(960px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 64px 0 48px;
+      background: #e9eee7;
+      border-bottom: 1px solid var(--line);
+    }
+
     .eyebrow {
       margin: 0 0 12px;
       color: var(--green);
@@ -39,91 +71,351 @@
       letter-spacing: .14em;
       text-transform: uppercase;
     }
-    h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.7rem, 8vw, 5rem); line-height: 1.04; font-weight: 500; letter-spacing: -.04em; }
-    .tagline { max-width: 650px; margin: 18px 0 0; color: #4e5d52; font-size: clamp(1.08rem, 2.5vw, 1.35rem); }
-    main { padding: 42px 0 64px; }
-    section { margin: 0 0 34px; }
-    h2 { margin: 0 0 12px; font-family: Georgia, "Times New Roman", serif; font-size: 1.65rem; font-weight: 500; }
-    p { margin: 0 0 14px; }
-    .notice { padding: 18px 20px; background: var(--soft); border-left: 4px solid var(--green); border-radius: 4px; }
-    .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-    .link-card { display: block; padding: 16px 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; text-decoration: none; }
-    .link-card strong { display: block; margin-bottom: 3px; color: var(--ink); }
-    .link-card span { display: block; color: var(--muted); font-size: .9rem; }
-    .byline { color: var(--muted); font-size: .94rem; }
-    footer { padding: 26px 0 34px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
-    footer p { margin: 0 0 6px; }
-    footer .philosophy { margin-top: 10px; color: var(--ink); font-size: .92rem; }
-    @media (max-width: 560px) { header { padding: 48px 0 40px; } main { padding-top: 32px; } }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 8vw, 5rem);
+      line-height: 1.04;
+      font-weight: 500;
+      letter-spacing: -.04em;
+    }
+
+    .tagline {
+      max-width: 680px;
+      margin: 18px 0 0;
+      color: #4e5d52;
+      font-size: clamp(1.08rem, 2.5vw, 1.35rem);
+    }
+
+    nav {
+      padding: 14px 0;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+    }
+
+    nav a {
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 42px 0 64px;
+    }
+
+    section {
+      margin: 0 0 38px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .notice {
+      padding: 18px 20px;
+      background: var(--soft);
+      border-left: 4px solid var(--green);
+      border-radius: 4px;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .link-card {
+      display: block;
+      padding: 16px 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color .15s ease;
+    }
+
+    .link-card:hover {
+      border-color: var(--green);
+    }
+
+    .link-card strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+    }
+
+    .link-card span {
+      display: block;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .external {
+      margin-top: 16px;
+    }
+
+    .external a {
+      margin-right: 16px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .byline {
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    footer {
+      padding: 26px 0 34px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    footer p {
+      margin: 0 0 6px;
+    }
+
+    footer .philosophy {
+      margin-top: 10px;
+      color: var(--ink);
+      font-size: .92rem;
+    }
+
+    @media (max-width: 560px) {
+      header {
+        padding: 48px 0 40px;
+      }
+
+      main {
+        padding-top: 32px;
+      }
+
+      nav .wrap {
+        gap: 10px 16px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="wrap">
-      <p class="eyebrow">An independent poultry documentation project</p>
-      <h1>GameSilkies</h1>
-      <p class="tagline">Documenting the Gamefowl × Silkie experiment — breeding, natural development, behaviour and individual birds.</p>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">An independent poultry documentation project</p>
+
+    <h1>GameSilkies</h1>
+
+    <p class="tagline">
+      Documenting the Gamefowl × Silkie experiment —
+      breeding, natural development, behaviour and individual birds.
+    </p>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="birds.html">Birds</a>
+    <a href="breeding.html">Breeding</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="publications.html">Publications</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="contact.html">Contact</a>
+    <a href="cooperation.html">Cooperation</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section>
+    <h2>About the project</h2>
+
+    <p>
+      GameSilkies is an independent experimental crossbreeding
+      and documentation project founded by José Flor – OzFlor
+      in March 2024.
+    </p>
+
+    <p>
+      It records naturally produced Gamefowl × Silkie hybrids
+      and follows their growth, behaviour, health observations,
+      breeding decisions and subsequent generations.
+    </p>
+
+    <p>
+      The project brings together practical poultry keeping,
+      long-term observation and systematic record-keeping.
+      Its purpose is to document what happens over time,
+      including uncertainty, variation and unexpected outcomes.
+    </p>
+  </section>
+
+  <section class="notice">
+    <strong>Project status</strong>
+
+    <p>
+      GameSilkies is a developing experimental project,
+      not an established or recognised poultry breed.
+      Observations, interpretations and hypotheses are
+      kept distinct. Conclusions may change as further
+      evidence becomes available.
+    </p>
+  </section>
+
+  <section>
+    <h2>Explore GameSilkies</h2>
+
+    <div class="links">
+
+      <a class="link-card" href="about.html">
+        <strong>About the Project</strong>
+        <span>Origins, purpose, principles and project identity.</span>
+      </a>
+
+      <a class="link-card" href="birds.html">
+        <strong>Individual Birds</strong>
+        <span>Bird identification, profiles and individual histories.</span>
+      </a>
+
+      <a class="link-card" href="breeding.html">
+        <strong>Breeding &amp; Generations</strong>
+        <span>Parentage, crosses, generations and breeding decisions.</span>
+      </a>
+
+      <a class="link-card" href="documentation.html">
+        <strong>Documentation</strong>
+        <span>Methods, observations, logs and interpretation standards.</span>
+      </a>
+
+      <a class="link-card" href="publications.html">
+        <strong>Publications &amp; Archives</strong>
+        <span>Articles, videos, research records and external publications.</span>
+      </a>
+
+      <a class="link-card" href="timeline.html">
+        <strong>Project Timeline</strong>
+        <span>Important events and milestones since March 2024.</span>
+      </a>
+
+      <a class="link-card" href="contact.html">
+        <strong>Contact</strong>
+        <span>Contact the project founder.</span>
+      </a>
+
+      <a class="link-card" href="cooperation.html">
+        <strong>Cooperation &amp; Assistance</strong>
+        <span>Open opportunities for collaboration and project support.</span>
+      </a>
+
     </div>
-  </header>
+  </section>
 
-  <main class="wrap">
-    <section>
-      <h2>About the project</h2>
-      <p>GameSilkies is an independent experimental crossbreeding and documentation project founded by José Flor – OzFlor in March 2024. It records naturally produced Gamefowl × Silkie hybrids and follows their growth, behaviour, health observations, breeding decisions and subsequent generations.</p>
-      <p>The project brings together practical poultry keeping, long-term observation and systematic record-keeping. Its purpose is to document what happens over time, including uncertainty, variation and outcomes that may not fit initial expectations.</p>
-    </section>
+  <section>
+    <h2>Project archive and platforms</h2>
 
-    <section class="notice">
-      <strong>Project status</strong>
-      <p>GameSilkies is a developing experimental project, not an established or recognised poultry breed. Observations, interpretations and hypotheses are kept distinct; conclusions may change as further evidence becomes available.</p>
-    </section>
+    <p>
+      The main website provides an overview and entry point.
+      Detailed daily observations and original records are
+      maintained separately.
+    </p>
 
-    <section>
-      <h2>Project resources</h2>
-      <div class="links">
-        <a class="link-card" href="https://odysee.com">
-          <strong>Odysee — Project archive</strong>
-          <span>Primary archive of video records and publications</span>
-        </a>
-        <a class="link-card" href="https://wordpress.com">
-          <strong>WordPress</strong>
-          <span>Project articles and documentation</span>
-        </a>
-        <a class="link-card" href="https://wordpress.comclarifiers-interpretation-standards/">
-          <strong>Clarifiers &amp; Interpretation Standards</strong>
-          <span>Guidance for reading and interpreting project records</span>
-        </a>
-        <a class="link-card" href="https://miraheze.org">
-          <strong>GameSilkies Wiki</strong>
-          <span>Wiki presence and project information</span>
-        </a>
-        <a class="link-card" href="https://github.com">
-          <strong>GitHub</strong>
-          <span>Project code and digital records</span>
-        </a>
-        <a class="link-card" href="https://orcid.org">
-          <strong>ORCID</strong>
-          <span>Researcher profile — José António Flor de Sousa</span>
-        </a>
-      </div>
-    </section>
+    <div class="external">
+      <a href="https://github.com/OzFlor/poultry-logs"
+         target="_blank" rel="noopener noreferrer">
+        Daily Poultry Logs
+      </a>
 
-    <section>
-      <h2>Documentation approach</h2>
-      <p>Records aim to preserve chronology, original observations, source attribution and uncertainty. AI-assisted organisation may help structure or normalise material, but AI is not the observer, caretaker, breeder or originator of the records.</p>
-    </section>
+      <a href="https://odysee.com/@Fazenda.Mondego:5"
+         target="_blank" rel="noopener noreferrer">
+        Odysee Archive
+      </a>
 
-    <section>
-      <h2>Project author</h2>
-      <p class="byline">José António Flor de Sousa — José Flor (OzFlor)<br>Founder of the GameSilkies Project</p>
-    </section>
-  </main>
+      <a href="https://gamesilkies.wordpress.com/"
+         target="_blank" rel="noopener noreferrer">
+        WordPress
+      </a>
 
-  <footer>
-    <div class="wrap">
-      <p>GameSilkies Project · José Flor – OzFlor · Independent experimental documentation</p>
-      <p class="philosophy"><strong>1992–2026 — Nature shares freely, so do I.</strong> <em>Use this kindly, credit OzFlor, and keep it out of business hands.</em></p>
+      <a href="https://gamesilkies.wordpress.com/clarifiers-interpretation-standards/"
+         target="_blank" rel="noopener noreferrer">
+        Clarifiers &amp; Interpretation Standards
+      </a>
+
+      <a href="https://gamesilkies.miraheze.org/wiki/User:OzFlor"
+         target="_blank" rel="noopener noreferrer">
+        GameSilkies Wiki
+      </a>
+
+      <a href="https://orcid.org/0009-0001-7123-6307"
+         target="_blank" rel="noopener noreferrer">
+        ORCID Researcher Profile
+      </a>
     </div>
-  </footer>
+  </section>
+
+  <section>
+    <h2>Documentation approach</h2>
+
+    <p>
+      Records aim to preserve chronology, original observations,
+      source attribution and uncertainty.
+    </p>
+
+    <p>
+      AI-assisted organisation and normalisation may help
+      structure the material. However, AI is not the observer,
+      caretaker, breeder or originator of the records.
+      Original observations remain attributed to their author.
+    </p>
+  </section>
+
+  <section>
+    <h2>Project author</h2>
+
+    <p class="byline">
+      José António Flor de Sousa — José Flor (OzFlor)<br>
+      Founder of the GameSilkies Project<br>
+      Independent naturalist poultry farmer, breeder and observer.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+
+    <p>
+      GameSilkies Project · José Flor – OzFlor
+    </p>
+
+    <p>
+      Independent experimental poultry documentation.
+    </p>
+
+    <p class="philosophy">
+      <strong>1992–2026 — Nature shares freely, so do I.</strong>
+      <em>
+        Use this kindly, credit OzFlor, and keep it out of business hands.
+      </em>
+    </p>
+
+  </div>
+</footer>
+
 </body>
 </html>
