@@ -1,9 +1,50 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://gamesilkies.com</loc>
+    <loc>https://gamesilkies.com/</loc>
     <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
+
+  <url>
+    <loc>https://gamesilkies.com/about.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://gamesilkies.com/birds.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://gamesilkies.com/breeding.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://gamesilkies.com/documentation.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://gamesilkies.com/publications.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://gamesilkies.com/timeline.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://gamesilkies.com/cooperation.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://gamesilkies.com/contact.html</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+
 </urlset>
