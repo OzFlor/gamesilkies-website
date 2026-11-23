@@ -4,7 +4,7 @@
   <!-- Main English homepage -->
   <url>
     <loc>https://gamesilkies.com/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
 
   <!-- English project pages -->
@@ -48,6 +48,11 @@
     <lastmod>2026-11-15</lastmod>
   </url>
 
+  <url>
+    <loc>https://gamesilkies.com/licence.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+
   <!-- Thai introduction -->
   <url>
     <loc>https://gamesilkies.com/th.html</loc>
@@ -61,6 +66,3 @@
   </url>
 
 </urlset>
-
-
-
