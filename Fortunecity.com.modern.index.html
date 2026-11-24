@@ -45,11 +45,24 @@
       gap: 1.25rem;
     }
 
-    aside img {
+    .earth-frame {
+      background: #020617;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .earth-frame img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
       display: block;
+    }
+
+    .earth-caption {
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      padding: 0.45rem 0.65rem;
+      background: rgba(15, 23, 42, 0.85);
     }
 
     .lang-switch {
@@ -125,11 +138,14 @@
   <div class="layout">
     <aside>
       <div>
-        <div style="font-size: 0.85rem; opacity: 0.85;">This is our World</div>
+        <div style="font-size: 0.9rem; font-weight: 600;">This is our World</div>
         <div style="font-size: 0.85rem; opacity: 0.85;">Este é o nosso Planeta</div>
       </div>
 
-      <img src="051b5880.jpg" alt="Yosemite">
+      <figure class="earth-frame" style="margin: 0;">
+        <img src="051b5880.jpg" alt="Earth seen from space with the lower-right side in night shadow">
+        <figcaption class="earth-caption">Planet Earth from space / Planeta Terra visto do espaço</figcaption>
+      </figure>
 
       <div>
         <div style="font-size: 0.8rem; opacity: 0.8; margin-bottom: 0.4rem;">Language / Língua</div>
@@ -169,7 +185,7 @@
 
       <div class="card">
         <h2>Archive &amp; Pages</h2>
-        <p>If you still have your original subpages and media files, link them here:</p>
+        <p>Recovered sections from the 1998–2001 FortuneCity site:</p>
         <ul>
           <li><a href="index_l.htm">Left Frame / Navigation (<code>index_l.htm</code>)</a></li>
           <li><a href="index_m.htm">Main Frame / Home (<code>index_m.htm</code>)</a></li>
@@ -178,7 +194,7 @@
       </div>
 
       <footer>
-        <div>Copyright &copy; 1998–2001 (updated archive), José António Flor de Sousa</div>
+        <div>Copyright &copy; 1998–2001 (modernised archive), José António Flor de Sousa</div>
         <div>Original site revision: 06/11/2001</div>
       </footer>
     </main>
