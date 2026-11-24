@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Site of José Flor</title>
+  <meta name="description" content="This site is about the life of José Flor, his hobbies, paragliding, parapente, astronomy, science, nature, Portugal, Macau, Brazil, Australia, and Fornos de Algodres.">
+  <meta name="keywords" content="paragliding, parapente, astronomy, astronomia, science, ciência, nature, natureza, Portugal, Macau, Brazil, Brasil, Australia, Fornos de Algodres, José António Flor de Sousa">
+  <meta name="author" content="José António Flor de Sousa">
+  <style>
+    :root {
+      --bg-sidebar: #092b2b;
+      --bg-main: #f7f9f9;
+      --surface: #ffffff;
+      --text-main: #142020;
+      --text-muted: #526363;
+      --accent: #0f766e;
+      --border: #d9e2e2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-main);
+      background: var(--bg-main);
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 100vh;
+    }
+
+    aside {
+      background: var(--bg-sidebar);
+      color: #f0fdfa;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    aside img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 6px;
+      padding: 0.45rem 0.8rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    main {
+      padding: 2rem clamp(1.25rem, 4vw, 3rem);
+      max-width: 900px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .tag {
+      background: #e6f4f1;
+      color: #0b4f4a;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div>
+        <div style="font-size: 0.85rem; opacity: 0.85;">This is our World</div>
+        <div style="font-size: 0.85rem; opacity: 0.85;">Este é o nosso Planeta</div>
+      </div>
+
+      <img src="051b5880.jpg" alt="Yosemite">
+
+      <div>
+        <div style="font-size: 0.8rem; opacity: 0.8; margin-bottom: 0.4rem;">Language / Língua</div>
+        <div class="lang-switch">
+          <button type="button" class="lang-btn active" data-lang="en">English</button>
+          <button type="button" class="lang-btn" data-lang="pt">Português</button>
+        </div>
+      </div>
+
+      <div id="current-date" style="font-size: 0.85rem; opacity: 0.9;"></div>
+    </aside>
+
+    <main>
+      <div id="content-en" class="card">
+        <h1>Web Site of José Flor</h1>
+        <p>Welcome to the Web Site of José Flor — exploring paragliding, astronomy, science, nature, and life across Portugal, Macau, Brazil, and Australia.</p>
+        <div class="topics">
+          <span class="tag">Paragliding</span>
+          <span class="tag">Astronomy</span>
+          <span class="tag">Science</span>
+          <span class="tag">Nature</span>
+          <span class="tag">Fornos de Algodres</span>
+        </div>
+      </div>
+
+      <div id="content-pt" class="card hidden">
+        <h1>Página Web de José Flor</h1>
+        <p>Bem-vindos à página da internet de José Flor — dedicada ao parapente, astronomia, ciência, natureza e histórias entre Portugal, Macau, Brasil e Austrália.</p>
+        <div class="topics">
+          <span class="tag">Parapente</span>
+          <span class="tag">Astronomia</span>
+          <span class="tag">Ciência</span>
+          <span class="tag">Natureza</span>
+          <span class="tag">Fornos de Algodres</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Archive &amp; Pages</h2>
+        <p>If you still have your original subpages and media files, link them here:</p>
+        <ul>
+          <li><a href="index_l.htm">Left Frame / Navigation (<code>index_l.htm</code>)</a></li>
+          <li><a href="index_m.htm">Main Frame / Home (<code>index_m.htm</code>)</a></li>
+          <li><a href="private.htm">Private Page (<code>private.htm</code>)</a></li>
+        </ul>
+      </div>
+
+      <footer>
+        <div>Copyright &copy; 1998–2001 (updated archive), José António Flor de Sousa</div>
+        <div>Original site revision: 06/11/2001</div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.lang-btn');
+    const enBlock = document.getElementById('content-en');
+    const ptBlock = document.getElementById('content-pt');
+    const dateEl = document.getElementById('current-date');
+
+    function updateDate(locale) {
+      const now = new Date();
+      dateEl.textContent = now.toLocaleDateString(locale, {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        buttons.forEach((b) => b.classList.toggle('active', b === btn));
+        enBlock.classList.toggle('hidden', lang !== 'en');
+        ptBlock.classList.toggle('hidden', lang !== 'pt');
+        document.documentElement.lang = lang;
+        updateDate(lang === 'pt' ? 'pt-PT' : 'en-GB');
+      });
+    });
+
+    updateDate('en-GB');
+  </script>
+</body>
+</html>
