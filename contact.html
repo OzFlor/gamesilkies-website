@@ -6,15 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Contact | GameSilkies</title>
-
   <meta name="description" content="Contact José Flor - OzFlor about the GameSilkies Project, its documentation, observations and possible cooperation.">
   <meta name="author" content="José Flor - OzFlor">
   <link rel="canonical" href="https://gamesilkies.com/contact.html">
-
-  <meta property="og:title" content="Contact | GameSilkies">
-  <meta property="og:description" content="Contact the GameSilkies Project.">
-  <meta property="og:url" content="https://gamesilkies.com/contact.html">
-  <meta property="og:type" content="website">
 
   <style>
     :root {
@@ -23,14 +17,11 @@
       --green-light: #e8eddf;
       --earth: #f4f3eb;
       --text: #30352d;
-      --muted: #687064;
       --border: #d5dacd;
       --white: #ffffff;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -51,13 +42,11 @@
       margin: 0;
       font-size: 2.1rem;
       font-weight: normal;
-      letter-spacing: 0.5px;
     }
 
     header p {
       margin: 8px 0 0;
       color: #e0e7d9;
-      font-size: 1rem;
     }
 
     nav {
@@ -75,9 +64,7 @@
       font-size: 0.9rem;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
 
     main {
       max-width: 850px;
@@ -91,13 +78,7 @@
       margin-top: 30px;
     }
 
-    a {
-      color: var(--green-dark);
-    }
-
-    .intro {
-      margin-bottom: 28px;
-    }
+    a { color: var(--green-dark); }
 
     .contact-form {
       background: var(--white);
@@ -115,14 +96,13 @@
       font-weight: bold;
     }
 
-    input,
-    textarea {
+    input, textarea {
       display: block;
       width: 100%;
       padding: 12px;
       border: 1px solid var(--border);
       border-radius: 4px;
-      background: #fff;
+      background: white;
       color: var(--text);
       font: 1rem Arial, sans-serif;
     }
@@ -132,39 +112,18 @@
       min-height: 140px;
     }
 
-    input:focus,
-    textarea:focus {
-      outline: 2px solid var(--green-main);
-      outline-offset: 1px;
-    }
-
     button {
-      display: inline-block;
       margin-top: 20px;
       padding: 12px 24px;
       border: none;
       border-radius: 4px;
       background: var(--green-dark);
-      color: var(--white);
+      color: white;
       font-size: 1rem;
       cursor: pointer;
     }
 
-    button:hover {
-      background: var(--green-main);
-    }
-
-    button:disabled {
-      opacity: 0.6;
-      cursor: wait;
-    }
-
-    #form-status {
-      margin-top: 18px;
-      font-family: Arial, sans-serif;
-      font-size: 0.95rem;
-      font-weight: bold;
-    }
+    button:hover { background: var(--green-main); }
 
     .privacy-note {
       padding: 15px 18px;
@@ -174,58 +133,22 @@
       font-size: 0.95rem;
     }
 
-    .external-links {
-      margin: 25px 0;
-    }
-
-    .external-links li {
-      margin-bottom: 8px;
-    }
-
     footer {
       margin-top: 50px;
       padding: 28px 20px;
       background: var(--green-dark);
-      color: var(--white);
+      color: white;
       text-align: center;
       font-size: 0.9rem;
     }
 
-    footer a {
-      color: #e0e7d9;
-    }
-
-    footer p {
-      margin: 8px 0;
-    }
-
-    /* Formspree spam honeypot */
-    .form-honeypot {
-      position: absolute;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
+    footer a { color: #e0e7d9; }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.7rem;
-      }
-
-      nav a {
-        margin: 5px 6px;
-        font-size: 0.85rem;
-      }
-
-      main {
-        margin: 25px auto;
-        padding: 0 16px;
-      }
-
-      .contact-form {
-        padding: 18px;
-      }
+      header h1 { font-size: 1.7rem; }
+      nav a { margin: 5px 6px; font-size: 0.85rem; }
+      main { margin: 25px auto; padding: 0 16px; }
+      .contact-form { padding: 18px; }
     }
   </style>
 </head>
@@ -253,73 +176,50 @@
 
   <h2>Contact</h2>
 
-  <div class="intro">
-    <p>
-      This page provides a way to contact José Flor - OzFlor
-      regarding the GameSilkies Project, its documentation,
-      observations, publications or possible cooperation.
-    </p>
+  <p>
+    This page provides a way to contact José Flor - OzFlor
+    regarding the GameSilkies Project, its documentation,
+    observations, publications or possible cooperation.
+  </p>
 
-    <p>
-      Please use the form below. A direct email address is
-      intentionally not published on this website.
-    </p>
-  </div>
+  <p>
+    Please use the form below. A direct email address is
+    intentionally not published on this website.
+  </p>
 
   <section class="contact-form" aria-label="Contact form">
 
     <form
-      id="contact-form"
       action="https://formspree.io/f/xrpqrngb"
       method="POST"
+      target="_blank"
       accept-charset="UTF-8">
 
       <label for="name">Name (optional)</label>
-      <input
-        id="name"
-        type="text"
-        name="name"
-        autocomplete="name">
+      <input id="name" type="text" name="name"
+             autocomplete="name">
 
       <label for="email">Email address</label>
-      <input
-        id="email"
-        type="email"
-        name="email"
-        autocomplete="email"
-        required>
+      <input id="email" type="email" name="email"
+             autocomplete="email" required>
 
       <label for="subject">Subject</label>
-      <input
-        id="subject"
-        type="text"
-        name="subject"
-        maxlength="150"
-        required>
+      <input id="subject" type="text" name="subject"
+             maxlength="150" required>
 
       <label for="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="6"
-        required></textarea>
+      <textarea id="message" name="message"
+                rows="6" required></textarea>
 
-      <!-- Spam honeypot: leave this field empty -->
-      <div class="form-honeypot" aria-hidden="true">
+      <!-- Spam protection honeypot -->
+      <div style="position:absolute;left:-9999px;"
+           aria-hidden="true">
         <label for="_gotcha">Leave this field empty</label>
-        <input
-          id="_gotcha"
-          type="text"
-          name="_gotcha"
-          tabindex="-1"
-          autocomplete="off">
+        <input id="_gotcha" type="text" name="_gotcha"
+               tabindex="-1" autocomplete="off">
       </div>
 
-      <button type="submit" id="submit-button">
-        Send message
-      </button>
-
-      <p id="form-status" role="status" aria-live="polite"></p>
+      <button type="submit">Send message</button>
 
     </form>
 
@@ -340,29 +240,30 @@
     documentation and publication channels:
   </p>
 
-  <ul class="external-links">
+  <ul>
     <li>
       <a href="https://odysee.com/@Fazenda.Mondego:5"
-         target="_blank"
-         rel="noopener noreferrer">Odysee – Video archive</a>
+         target="_blank" rel="noopener noreferrer">
+        Odysee – Video archive
+      </a>
     </li>
-
     <li>
       <a href="https://github.com/OzFlor/poultry-logs"
-         target="_blank"
-         rel="noopener noreferrer">GitHub – Poultry logs</a>
+         target="_blank" rel="noopener noreferrer">
+        GitHub – Poultry logs
+      </a>
     </li>
-
     <li>
       <a href="https://gamesilkies.wordpress.com/"
-         target="_blank"
-         rel="noopener noreferrer">WordPress – Project articles</a>
+         target="_blank" rel="noopener noreferrer">
+        WordPress – Project articles
+      </a>
     </li>
-
     <li>
       <a href="https://orcid.org/0009-0001-7123-6307"
-         target="_blank"
-         rel="noopener noreferrer">ORCID – Author profile</a>
+         target="_blank" rel="noopener noreferrer">
+        ORCID – Author profile
+      </a>
     </li>
   </ul>
 
@@ -384,45 +285,6 @@
     <a href="index.html">Home</a>
   </p>
 </footer>
-
-<script>
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
-  const submitButton = document.getElementById("submit-button");
-
-  form.addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    status.textContent = "Sending message...";
-    submitButton.disabled = true;
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: {
-          "Accept": "application/json"
-        }
-      });
-
-      if (response.ok) {
-        form.reset();
-        status.textContent =
-          "Message sent successfully. Thank you.";
-      } else {
-        status.textContent =
-          "The message could not be sent. Please try again later.";
-      }
-
-    } catch (error) {
-      status.textContent =
-        "A network error occurred. Please check your connection and try again.";
-
-    } finally {
-      submitButton.disabled = false;
-    }
-  });
-</script>
 
 </body>
 </html>
