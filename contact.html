@@ -2,294 +2,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YG5ESNLKGJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YG5ESNLKGJ');
-</script>
-
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact José Flor - OzFlor about the independent GameSilkies Project, documentation and non-commercial cooperation.">
-  <title>Contact | GameSilkies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact — GameSilkies</title>
+  <meta name="description" content="Contact José Flor - OzFlor about the GameSilkies independent poultry crossbreeding and documentation project.">
+  <link rel="canonical" href="https://gamesilkies.com/contact.html">
+  <meta name="robots" content="index, follow">
 
   <style>
     :root {
-      color-scheme: light;
-      --ink: #25332b;
-      --muted: #647168;
-      --paper: #f7f7f1;
-      --panel: #ffffff;
-      --green: #405b49;
-      --line: #dce2d9;
-      --soft: #eaf0e9;
+      color-scheme: light dark;
+      --background: #f3f5ef;
+      --surface: #ffffff;
+      --text: #26352b;
+      --muted: #657467;
+      --accent: #496b4e;
+      --border: #d5ded3;
     }
 
-    * { box-sizing: border-box; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #171d18;
+        --surface: #222b23;
+        --text: #e5ece4;
+        --muted: #aab8aa;
+        --accent: #a6c99e;
+        --border: #3b493d;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
-      color: var(--ink);
-      background: var(--paper);
     }
 
     header {
-      background: #e9eee7;
-      border-bottom: 1px solid var(--line);
-      padding: 28px 20px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 4%;
     }
 
-    .header-inner, main, footer {
-      max-width: 1050px;
+    .nav {
+      max-width: 1100px;
       margin: auto;
-    }
-
-    .brand {
-      font-family: Georgia, serif;
-      font-size: 2rem;
-      color: var(--green);
-      margin: 0;
-    }
-
-    .tagline {
-      color: var(--muted);
-      margin: 5px 0 20px;
-    }
-
-    nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px 18px;
+      gap: 12px 20px;
     }
 
-    nav a {
-      color: var(--green);
+    .nav a {
       text-decoration: none;
-      font-size: .95rem;
+      font-size: 0.95rem;
     }
 
-    nav a:hover { text-decoration: underline; }
+    main {
+      width: min(850px, 92%);
+      margin: 0 auto;
+      padding: 42px 0 60px;
+    }
 
-    main { padding: 42px 20px 65px; }
-
-    h1, h2, h3 {
-      font-family: Georgia, serif;
-      color: var(--green);
+    h1, h2 {
       line-height: 1.3;
     }
 
-    h1 { font-size: 2.3rem; margin-top: 0; }
-    h2 { font-size: 1.55rem; margin-top: 38px; }
+    h1 {
+      color: var(--accent);
+      font-size: 2rem;
+    }
 
-    p { margin: 12px 0; }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+    }
+
+    p, li, label {
+      font-size: 1rem;
+    }
+
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
 
     .intro {
-      font-size: 1.12rem;
-      max-width: 820px;
+      color: var(--muted);
     }
 
     .panel {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 24px;
-      margin: 20px 0;
-    }
-
-    .panel h3 { margin-top: 0; }
-
-    .note {
-      background: var(--soft);
-      border-left: 4px solid var(--green);
-      padding: 17px 20px;
+      padding: 22px;
       margin: 24px 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
     }
 
-    a { color: var(--green); }
-
-    .platform {
-      display: block;
-      font-weight: bold;
-      margin-top: 10px;
+    form {
+      display: grid;
+      gap: 16px;
     }
 
-    ul { padding-left: 24px; }
-    li { margin: 7px 0; }
+    .field {
+      display: grid;
+      gap: 6px;
+    }
 
-    .back {
-      display: inline-block;
-      margin-top: 32px;
-      font-weight: bold;
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: var(--background);
+      color: var(--text);
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 170px;
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    button {
+      width: fit-content;
+      padding: 12px 24px;
+      border: 0;
+      border-radius: 5px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .privacy {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .honeypot {
+      position: absolute;
+      left: -5000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
     }
 
     footer {
-      border-top: 1px solid var(--line);
-      padding: 25px 20px 35px;
+      margin-top: 42px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
       color: var(--muted);
-      font-size: .9rem;
-    }
-
-    footer p { margin: 5px 0; }
-
-    @media (max-width: 600px) {
-      .brand { font-size: 1.7rem; }
-      h1 { font-size: 1.9rem; }
-      main { padding-top: 30px; }
-      .panel { padding: 19px; }
+      font-size: 0.9rem;
     }
   </style>
-  
-<!-- GameSilkies favicon -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
 </head>
 
 <body>
 
 <header>
-  <div class="header-inner">
-    <p class="brand">GameSilkies</p>
-    <p class="tagline">An independent naturalist poultry project</p>
-
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="birds.html">Birds</a>
-      <a href="breeding.html">Breeding</a>
-      <a href="documentation.html">Documentation</a>
-      <a href="publications.html">Publications</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="cooperation.html">Cooperation</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="birds.html">Individual Birds</a>
+    <a href="breeding.html">Breeding</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="publications.html">Publications</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="cooperation.html">Cooperation</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <main>
 
-  <h1>Contact</h1>
+  <h1>Contact GameSilkies</h1>
 
   <p class="intro">
-    For questions, information, scientific or technical discussions,
-    and possible cooperation concerning the GameSilkies Project,
-    please use one of the public project platforms below.
-  </p>
-
-  <div class="note">
-    <strong>Privacy notice:</strong> Direct email addresses are not
-    published on this website. This helps reduce unwanted exposure,
-    automated address harvesting and spam.
-  </div>
-
-  <h2>Project platforms</h2>
-
-  <section class="panel">
-    <h3>WordPress</h3>
-    <p>
-      Visit the GameSilkies publication website. You may use any
-      available contact or comment facility there, if enabled.
-    </p>
-    <a class="platform"
-       href="https://gamesilkies.wordpress.com/"
-       target="_blank" rel="noopener">
-      GameSilkies on WordPress →
-    </a>
-  </section>
-
-  <section class="panel">
-    <h3>Odysee</h3>
-    <p>
-      The main public video archive. You can use the platform's
-      available interaction features where supported.
-    </p>
-    <a class="platform"
-       href="https://odysee.com/@Fazenda.Mondego:5"
-       target="_blank" rel="noopener">
-      Visit the Odysee archive →
-    </a>
-  </section>
-
-  <section class="panel">
-    <h3>GitHub</h3>
-    <p>
-      For technical discussions concerning published records,
-      repositories and documentation.
-    </p>
-    <a class="platform"
-       href="https://github.com/OzFlor"
-       target="_blank" rel="noopener">
-      Visit OzFlor on GitHub →
-    </a>
-  </section>
-
-  <section class="panel">
-    <h3>ORCID</h3>
-    <p>
-      Professional and research-related identification and
-      background information.
-    </p>
-    <a class="platform"
-       href="https://orcid.org/0009-0001-7123-6307"
-       target="_blank" rel="noopener">
-      View ORCID profile →
-    </a>
-  </section>
-
-  <h2>Cooperation enquiries</h2>
-
-  <p>
-    GameSilkies is open to appropriate non-commercial scientific,
-    technical and documentation cooperation.
+    For questions, observations, documentation-related discussions
+    or proposals for cooperation, you may use the form below.
   </p>
 
   <p>
-    Cooperation is based on mutual agreement. The sharing of selected
-    records, original imagery or other project material is considered
-    individually. Private raw logs are not automatically available
-    for unrestricted access or redistribution.
+    GameSilkies is an independent experimental poultry
+    crossbreeding and documentation project founded by
+    José Flor - OzFlor in March 2024.
   </p>
+
+  <section class="panel">
+
+    <h2>Send a message</h2>
+
+    <form
+      action="https://formspree.io/f/xrpqrngb"
+      method="POST"
+      target="_blank"
+      accept-charset="UTF-8">
+
+      <div class="field">
+        <label for="name">Name (optional)</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required>
+      </div>
+
+      <div class="field">
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          maxlength="150"
+          required>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          required></textarea>
+      </div>
+
+      <!-- Spam honeypot: legitimate visitors should leave this empty -->
+      <div class="honeypot" aria-hidden="true">
+        <label for="website">Leave this field empty</label>
+        <input
+          type="text"
+          id="website"
+          name="_gotcha"
+          tabindex="-1"
+          autocomplete="off">
+      </div>
+
+      <button type="submit">Send message</button>
+
+      <p class="privacy">
+        Your message and email address will be submitted to
+        Formspree for delivery. They will be handled according
+        to Formspree's privacy practices. Please avoid including
+        passwords, sensitive personal information or confidential
+        records in this form.
+      </p>
+
+    </form>
+  </section>
+
+  <h2>Other project platforms</h2>
 
   <p>
-    For further information, please read the
-    <a href="cooperation.html">Cooperation page</a>.
+    You can also find publicly available project material
+    through these platforms:
   </p>
-
-  <h2>Before contacting</h2>
 
   <ul>
-    <li>Identify the subject of your enquiry clearly.</li>
-    <li>Include relevant project or publication references where possible.</li>
-    <li>Do not post private or sensitive information in public comments.</li>
-    <li>Allow time for a response; this is an independently operated project.</li>
+    <li>
+      <a href="https://odysee.com/@Fazenda.Mondego:5"
+         target="_blank" rel="noopener noreferrer">
+        Fazenda Mondego — Odysee
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/OzFlor"
+         target="_blank" rel="noopener noreferrer">
+        GitHub — OzFlor
+      </a>
+    </li>
+    <li>
+      <a href="https://gamesilkies.wordpress.com/"
+         target="_blank" rel="noopener noreferrer">
+        GameSilkies — WordPress
+      </a>
+    </li>
+    <li>
+      <a href="https://orcid.org/0009-0001-7123-6307"
+         target="_blank" rel="noopener noreferrer">
+        ORCID — José António Flor de Sousa
+      </a>
+    </li>
   </ul>
 
-  <div class="note">
-    Contact through an external platform is subject to that platform's
-    own availability, account settings and communication policies.
-    No response time or communication channel is guaranteed.
-  </div>
+  <footer>
+    <p>
+      GameSilkies — Independent experimental poultry
+      crossbreeding and documentation project.
+    </p>
 
-  <a class="back" href="index.html">← Back to GameSilkies Home</a>
+    <p>
+      José Flor - OzFlor
+    </p>
+
+    <p>
+      1992–2026 — Nature shares freely, so do I.
+      Use this kindly, credit OzFlor, and keep it out of business hands.
+    </p>
+
+    <p>
+      <a href="licence.html">Licence and Usage Terms</a>
+      |
+      <a href="index.html">Return to Home</a>
+    </p>
+  </footer>
 
 </main>
 
-<footer>
-  <p><strong>GameSilkies Project</strong></p>
-  <p>José Flor - OzFlor</p>
-  <p>Independent experimental poultry crossbreeding and documentation.</p>
-  <p>1992–2026 — Nature shares freely, so do I. Use this kindly, credit OzFlor, and keep it out of business hands.</p>
-  <p><a href="https://orcid.org/0009-0001-7123-6307">ORCID profile</a></p>
-</footer>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1d6dd14732d54fbb9c9ff17b75602cbf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
